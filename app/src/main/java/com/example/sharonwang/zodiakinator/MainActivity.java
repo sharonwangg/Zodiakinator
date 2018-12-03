@@ -57,6 +57,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -71,6 +83,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -85,6 +109,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -99,6 +135,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -113,6 +161,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -127,6 +187,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -141,6 +213,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -155,6 +239,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -169,6 +265,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -183,6 +291,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -197,6 +317,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end game
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -211,6 +343,18 @@ public class MainActivity extends AppCompatActivity {
                 if (questionNum == 10) {
                     //end
                     question.setText(getZodiacResult());
+                    answer1.setVisibility(View.GONE);
+                    answer2.setVisibility(View.GONE);
+                    answer3.setVisibility(View.GONE);
+                    answer4.setVisibility(View.GONE);
+                    answer5.setVisibility(View.GONE);
+                    answer6.setVisibility(View.GONE);
+                    answer7.setVisibility(View.GONE);
+                    answer8.setVisibility(View.GONE);
+                    answer9.setVisibility(View.GONE);
+                    answer10.setVisibility(View.GONE);
+                    answer11.setVisibility(View.GONE);
+                    answer12.setVisibility(View.GONE);
                 } else {
                     updateQuestion(questionNum);
                 }
@@ -235,7 +379,6 @@ public class MainActivity extends AppCompatActivity {
             answer2.setText(questions.getChoice(num, 1));
             answer7.setText(questions.getChoice(num, 2));
             answer8.setText(questions.getChoice(num, 3));
-
         } else {
             answer3.setVisibility(View.VISIBLE);
             answer4.setVisibility(View.VISIBLE);
