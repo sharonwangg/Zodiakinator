@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private String answer;
     private int questionNum = 0;
     public int[] signCount = new int[12];
+    private RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -237,30 +238,45 @@ public class MainActivity extends AppCompatActivity {
         answer11.setVisibility(View.GONE);
         answer12.setVisibility(View.GONE);
 
-        String URL = "http://horoscope-api.herokuapp.com/horoscope/today/Libra";
+        requestQueue = Volley.newRequestQueue(this);
+        jsonParse();
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
 
-        JsonObjectRequest objectRequest = new JsonObjectRequest(
-                Request.Method.GET,
-                URL,
-                null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Log.w("Rest Response", response.toString());
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.w("Rest Response", error.toString());
-                    }
-                }
-        );
+    }
 
-        requestQueue.add(objectRequest);
+    private void jsonParse() {
 
+        String URL = "https://api.myjson.com/bins/kj2fq";
+
+
+        try {
+            JsonObjectRequest objectRequest = new JsonObjectRequest(
+                    Request.Method.GET,
+                    URL,
+                    null,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(final JSONObject response) {
+                            try {
+                                String horoscope = response.getString("horoscope");
+
+                                question.append("\n\nHOROSCOPE: "+horoscope);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(final VolleyError error) {
+                            error.printStackTrace();
+                        }
+                    });
+
+            requestQueue.add(objectRequest);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void updateQuestion(int num) {
