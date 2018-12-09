@@ -1,24 +1,22 @@
 package com.example.sharonwang.zodiakinator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.*;
 import android.view.*;
-import org.json.*;
-import com.android.volley.*;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-import android.util.Log;
+import android.widget.TextView;
+import android.text.method.ScrollingMovementMethod;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10, answer11, answer12;
-    TextView question;
+    public Button answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10, answer11, answer12;
+    public static TextView question;
+
     private Questions questions = new Questions();
-    private String answer;
     private int questionNum = 0;
-    public int[] signCount = new int[12];
-    private RequestQueue requestQueue;
+    private int[] signCount = new int[12];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         answer11 = (Button) findViewById(R.id.answer11);
         answer12 = (Button) findViewById(R.id.answer12);
         question = (TextView) findViewById(R.id.question);
-
+        question.setMovementMethod(new ScrollingMovementMethod());
 
         question.setText(questions.getQuestion(0));
         answer1.setText(questions.getChoice(0, 0));
@@ -57,7 +55,14 @@ public class MainActivity extends AppCompatActivity {
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[0]++;
+                if (questionNum == 4) {
+                    scoreQuestion4(1);
+                } else if (questionNum == 7) {
+                    scoreQuestion7(1);
+                } else {
+                    signCount[0] = signCount[0] + 1;
+                }
+
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -71,7 +76,14 @@ public class MainActivity extends AppCompatActivity {
         answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[1]++;
+                if (questionNum == 4) {
+                    scoreQuestion4(2);
+                } else if (questionNum == 7) {
+                    scoreQuestion7(2);
+                } else {
+                    signCount[1] = signCount[1] + 1;
+                }
+
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -85,7 +97,13 @@ public class MainActivity extends AppCompatActivity {
         answer3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[2]++;
+                if (questionNum == 4) {
+                    scoreQuestion4(3);
+                } else if (questionNum == 7) {
+                    scoreQuestion7(3);
+                } else {
+                    signCount[2] = signCount[2] + 1;
+                }
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -99,7 +117,13 @@ public class MainActivity extends AppCompatActivity {
         answer4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[3]++;
+                if (questionNum == 4) {
+                    scoreQuestion4(4);
+                } else if (questionNum == 7) {
+                    scoreQuestion7(4);
+                } else {
+                    signCount[3] = signCount[3] + 1;
+                }
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -113,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         answer5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[4]++;
+                signCount[4] = signCount[4] + 1;
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -127,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         answer6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[5]++;
+                signCount[5] = signCount[5] + 1;
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -141,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
         answer7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[6]++;
+                signCount[6] = signCount[6] + 1;
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -155,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
         answer8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[7]++;
+                signCount[7] = signCount[7] + 1;
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -169,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
         answer9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[8]++;
+                signCount[8] = signCount[8] + 1;
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -183,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
         answer10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[9]++;
+                signCount[9] = signCount[9] + 1;
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -197,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         answer11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[10]++;
+                signCount[10] = signCount[10] + 1;
                 questionNum++;
                 if (questionNum == 10) {
                     //end game
@@ -211,12 +235,17 @@ public class MainActivity extends AppCompatActivity {
         answer12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signCount[11]++;
+                signCount[11] = signCount[11] + 1;
                 questionNum++;
                 if (questionNum == 10) {
                     //end
                     endGame();
                 } else {
+                    if (answer12.getText().equals("Back to Home")) {
+                        Intent intent = new Intent(MainActivity.this, HomeScreen.class);
+                        startActivity(intent);
+                        finish();
+                    }
                     updateQuestion(questionNum);
                 }
             }
@@ -224,7 +253,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void endGame() {
-        question.setText(getZodiacResult());
+        String header = "<b>YOUR ZODIAC:</b>";
+        question.setText(Html.fromHtml(header));
+        question.append("\n" + getZodiacResult());
         answer1.setVisibility(View.GONE);
         answer2.setVisibility(View.GONE);
         answer3.setVisibility(View.GONE);
@@ -236,46 +267,51 @@ public class MainActivity extends AppCompatActivity {
         answer9.setVisibility(View.GONE);
         answer10.setVisibility(View.GONE);
         answer11.setVisibility(View.GONE);
-        answer12.setVisibility(View.GONE);
 
-        requestQueue = Volley.newRequestQueue(this);
-        jsonParse();
+        FetchData process = new FetchData(getZodiacResult());
+        process.execute();
 
+        answer12.setText("Back to Home");
 
     }
 
-    private void jsonParse() {
+    private void scoreQuestion4(int answer) {
+        if (answer == 1) {
+            signCount[1] = signCount[1] + 1;
+            signCount[6] = signCount[6] + 1;
+            signCount[3] = signCount[3] + 1;
+            signCount[7] = signCount[7] + 1;
+        } else if (answer == 2) {
+            signCount[2] = signCount[2] + 1;
+            signCount[8] = signCount[8] + 1;
+            signCount[11] = signCount[11] + 1;
+        } else if (answer == 3) {
+            signCount[0] = signCount[0] + 1;
+            signCount[4] = signCount[4] + 1;
+            signCount[9] = signCount[9] + 1;
+        } else {
+            signCount[5] = signCount[5] + 1;
+            signCount[10] = signCount[10] + 1;
+        }
+    }
 
-        String URL = "https://api.myjson.com/bins/kj2fq";
-
-
-        try {
-            JsonObjectRequest objectRequest = new JsonObjectRequest(
-                    Request.Method.GET,
-                    URL,
-                    null,
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(final JSONObject response) {
-                            try {
-                                String horoscope = response.getString("horoscope");
-
-                                question.append("\n\nHOROSCOPE: "+horoscope);
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(final VolleyError error) {
-                            error.printStackTrace();
-                        }
-                    });
-
-            requestQueue.add(objectRequest);
-        } catch (Exception e) {
-            e.printStackTrace();
+    private void scoreQuestion7(int answer) {
+        if (answer == 1) {
+            signCount[0] = signCount[0] + 1;
+            signCount[4] = signCount[4] + 1;
+            signCount[8] = signCount[8] + 1;
+        } else if (answer == 2) {
+            signCount[1] = signCount[1] + 1;
+            signCount[5] = signCount[5] + 1;
+            signCount[9] = signCount[9] + 1;
+        } else if (answer == 3) {
+            signCount[2] = signCount[2] + 1;
+            signCount[6] = signCount[6] + 1;
+            signCount[10] = signCount[10] + 1;
+        } else {
+            signCount[3] = signCount[3] + 1;
+            signCount[7] = signCount[7] + 1;
+            signCount[11] = signCount[11] + 1;
         }
     }
 
@@ -283,10 +319,10 @@ public class MainActivity extends AppCompatActivity {
         question.setText(questions.getQuestion(num));
 
         if (num == 4 || num == 7) {
-            answer3.setVisibility(View.GONE);
-            answer4.setVisibility(View.GONE);
             answer5.setVisibility(View.GONE);
             answer6.setVisibility(View.GONE);
+            answer7.setVisibility(View.GONE);
+            answer8.setVisibility(View.GONE);
             answer9.setVisibility(View.GONE);
             answer10.setVisibility(View.GONE);
             answer11.setVisibility(View.GONE);
@@ -294,13 +330,13 @@ public class MainActivity extends AppCompatActivity {
 
             answer1.setText(questions.getChoice(num, 0));
             answer2.setText(questions.getChoice(num, 1));
-            answer7.setText(questions.getChoice(num, 2));
-            answer8.setText(questions.getChoice(num, 3));
+            answer3.setText(questions.getChoice(num, 2));
+            answer4.setText(questions.getChoice(num, 3));
         } else {
-            answer3.setVisibility(View.VISIBLE);
-            answer4.setVisibility(View.VISIBLE);
             answer5.setVisibility(View.VISIBLE);
             answer6.setVisibility(View.VISIBLE);
+            answer7.setVisibility(View.VISIBLE);
+            answer8.setVisibility(View.VISIBLE);
             answer9.setVisibility(View.VISIBLE);
             answer10.setVisibility(View.VISIBLE);
             answer11.setVisibility(View.VISIBLE);
@@ -349,7 +385,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (indexOfMax == 7) {
             return "Scorpio";
         } else if (indexOfMax == 8) {
-            return "Saggitarius";
+            return "Sagittarius";
         } else if (indexOfMax == 9) {
             return "Capricorn";
         } else if (indexOfMax == 10) {

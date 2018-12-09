@@ -4,49 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DF6D48"
     tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/answer1"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/whiteroundedbutton"
+        android:text="Button"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/answer2"
+        app:layout_constraintEnd_toStartOf="@+id/answer7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <Button
+        android:id="@+id/answer2"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/whiteroundedbutton"
+        android:text="Button"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/answer3"
+        app:layout_constraintEnd_toStartOf="@+id/answer8"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/answer3"
         android:layout_width="166dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/whiteroundedbutton"
         android:text="Button"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/answer4"
         app:layout_constraintEnd_toStartOf="@+id/answer9"
-        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/answer4"
         android:layout_width="166dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/whiteroundedbutton"
         android:text="Button"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/answer5"
         app:layout_constraintEnd_toStartOf="@+id/answer10"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/answer2"
-        android:layout_width="166dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/answer3"
-        app:layout_constraintEnd_toStartOf="@+id/answer8"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -59,6 +84,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
+        android:background="@drawable/whiteroundedbutton"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/answer6"
         app:layout_constraintEnd_toStartOf="@+id/answer11"
         app:layout_constraintStart_toStartOf="parent" />
@@ -73,6 +100,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="40dp"
         android:text="Button"
+        android:background="@drawable/whiteroundedbutton"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/answer12"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,9 +112,12 @@
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
+        android:background="@drawable/whiteroundedbutton"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/answer8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -99,6 +131,8 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
+        android:background="@drawable/whiteroundedbutton"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/answer9"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -110,6 +144,8 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
+        android:background="@drawable/whiteroundedbutton"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/answer10"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -121,6 +157,8 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
+        android:background="@drawable/whiteroundedbutton"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/answer11"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -132,6 +170,8 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
+        android:background="@drawable/whiteroundedbutton"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/answer12"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -143,42 +183,31 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="40dp"
         android:text="Button"
+        android:background="@drawable/whiteroundedbutton"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/answer1"
-        android:layout_width="166dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/answer2"
-        app:layout_constraintEnd_toStartOf="@+id/answer7"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
-
     <TextView
         android:id="@+id/question"
-        android:layout_width="351dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_width="343dp"
+        android:layout_height="426dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1.0"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
         android:text="QUESTION"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/answer7"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
 
 </android.support.constraint.ConstraintLayout>
